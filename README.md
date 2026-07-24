@@ -49,6 +49,87 @@
 
 ---
 
+
+## 📸 Screenshots
+
+The following screenshots showcase the major workflows and user interfaces of the application.
+
+---
+
+### 🔐 User Login Portal
+
+Secure login page for **Teachers** and **Students** with role-based authentication, demo account access, and responsive UI design.
+
+![User Login](assets/screenshots/user-login.png)
+
+---
+
+### 👨‍🏫 User Dashboard
+
+Personalized dashboard displaying notices relevant to the logged-in user (Teacher or Student), including audience filtering and notice details.
+
+![User Dashboard](assets/screenshots/user-dashboard.png)
+
+---
+
+### 📝 User Registration
+
+Self-registration page with **Pending → Accepted / Rejected** approval workflow managed by the administrator.
+
+![User Registration](assets/screenshots/user-registration.png)
+
+---
+
+### 🛡️ Admin Login Portal
+
+Dedicated administrator authentication panel with secure session handling and separate routing from the user portal.
+
+![Admin Login](assets/screenshots/admin-login.png)
+
+---
+
+### 📊 Admin Dashboard
+
+Administrative overview with live statistics for total users, pending requests, and published notices.
+
+![Admin Dashboard](assets/screenshots/admin-dashboard.png)
+
+---
+
+### 📢 Notice Management
+
+Create, edit, publish, and delete institutional notices targeted to **All Students**, **All Teachers**, or a **specific user**.
+
+![Notice Management](assets/screenshots/notice-management.png)
+
+---
+
+### 👥 User Management
+
+Manage faculty and student accounts, including adding users, updating status, and removing accounts.
+
+![User Management](assets/screenshots/user-management.png)
+
+---
+
+### ✅ Registration Approval Workflow
+
+Approve or reject newly registered users directly from the admin panel.
+
+![Approval Workflow](assets/screenshots/user-management.png)
+
+---
+
+
+
+
+
+
+
+
+
+
+
 ## 🛠️ Tech Stack
 
 | Layer          | Technology                        |
@@ -100,7 +181,7 @@ faculty-directory/
 │
 ├── assets/
 │   └── css/style.css           # Full custom stylesheet — no external dependencies
-│
+│   |--js/auth.js
 ├── database/
 │   └── schema.sql              # Full DB schema + seeded demo data
 │
@@ -122,8 +203,8 @@ faculty-directory/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/faculty-directory.git
-cd faculty-directory
+git clone https://github.com/your-username/faculty-directory-notice-board.git
+cd faculty-directory-notice-board
 ```
 
 ### 2. Import the Database
@@ -136,11 +217,11 @@ This creates the `faculty_directory` database and seeds it with demo admins, use
 Open `config/config.php` and update your local settings:
 ```php
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');       // your MySQL username
-define('DB_PASS', '');           // your MySQL password
+define('DB_USER', 'root');       
+define('DB_PASS', '');           
 define('DB_NAME', 'faculty_directory');
 
-define('APP_URL',  'http://localhost/faculty-directory');  // match your server path
+define('APP_URL',  'http://localhost/faculty-directory-notice-board');  // match your server path
 ```
 
 ### 4. Start the Server
@@ -159,14 +240,28 @@ Then open `http://localhost:8000`
 
 ---
 
+
+## 🌐 Live Demo
+
+Explore the application online using the demo credentials below.
+
+| Portal | URL |
+|--------|-----|
+| 👤 User Portal | https://facultydirectory.lovestoblog.com |
+| 🛡️ Admin Portal | https://facultydirectory.lovestoblog.com/admin |
+
+> **Note:** This is a public demonstration environment. Some data may be reset periodically.
+
+
+---
 ## 🔑 Default Login Credentials
 
 ### Admin Panel → `/admin/index.php`
 
 | Role           | Email                 | Password |
 |----------------|-----------------------|----------|
-| Administrator  | sarmad@gmail.com      | `admin`  |
-| Super Admin    | fazal@gmail.com       | `admin`  |
+| Administrator  | admin@gmail.com      | `adminpassword`  | 
+| Super Admin    | fazal@gmail.com       | `admin123`  |
 
 ### User Portal → `/index.php` (Demo Accounts)
 
@@ -179,8 +274,8 @@ Then open `http://localhost:8000`
 
 > ⚠️ **Important:** Change all default passwords immediately when deploying to any public or production environment.
 
----
 
+---
 ## 🔒 Security Implementation
 
 | Threat            | Mitigation                                              |
@@ -238,22 +333,12 @@ This lets you explore every feature of the system immediately after import — n
 
 ---
 
-## 🗺️ Possible Enhancements
-
-- [ ] Password reset via email (PHPMailer / SMTP)
-- [ ] File attachment support for notices (PDF circulars)
-- [ ] Pagination for large notice/user lists
-- [ ] Search & filter notices by category or date
-- [ ] CSRF tokens on all forms
-- [ ] REST API layer for mobile clients
-- [ ] Dark mode toggle
-
----
 
 ## 👤 Author
 
-**Sarmad Ali**  
-[GitHub](https://github.com/your-username) · [LinkedIn](https://linkedin.com/in/your-profile)
+**Fazal Abbas Shah**  
+[GitHub](https://github.com/Fazal5172/faculty-directory-notice-board) ·
+[LinkedIn](https://www.linkedin.com/in/fazal111/)
 
 ---
 
@@ -263,4 +348,4 @@ This project is licensed under the [MIT License](LICENSE) — free to use, modif
 
 ---
 
-<p align="center">Built with ❤️ using Core PHP — no frameworks, no shortcuts.</p>
+<p align="center">Built with Core PHP (OOP), MySQL, and modern PHP security practices.</p>
