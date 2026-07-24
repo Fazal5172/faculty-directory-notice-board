@@ -49,8 +49,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <div class="auth-wrapper">
     <div class="auth-card">
-        <h1><?= APP_NAME ?></h1>
-        <p>Create your account</p>
+
+    <div class="brand">
+    <h1>Faculty Directory</h1>
+    <p class="brand-subtitle">University Notice Board System</p>
+    <p>Create your account</p>
+</div>
+
+
 
         <?php if ($error):   ?><div class="alert alert-danger"><?=  htmlspecialchars($error)   ?></div><?php endif; ?>
         <?php if ($success): ?><div class="alert alert-success"><?= htmlspecialchars($success) ?></div><?php endif; ?>
