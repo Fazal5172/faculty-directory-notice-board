@@ -35,16 +35,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login — <?= APP_NAME ?></title>
     <link rel="stylesheet" href="<?= APP_URL ?>/assets/css/style.css">
+    
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 <body>
-<div class="auth-wrapper" style="background:#1a3c5e;">
+<div class="auth-wrapper-admin" style="background:#1a3c5e;">
+<div class="top-backtouser">
+    <a href="<?= APP_URL ?>/index.php">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to Teacher / Student Login
+    </a>
+</div>
     <div class="auth-card">
-        <h1><?= APP_NAME ?></h1>
-        <p>Administrator Sign In</p>
+
+
+    <div class="brand">
+    <h1>Faculty Directory</h1>
+    <p class="brand-subtitle">University Notice Board System</p>
+    <p class="login-subtitle">
+        <i class="fas fa-lock"></i> Administrator Sign In
+    </p>
+</div>
+
+
 
         <?php if ($error): ?>
             <div class="alert alert-danger"><?= htmlspecialchars($error) ?></div>
-        <?php endif; ?>
+        <?php endif; ?> 
 
         <form method="POST" action="">
             <div class="form-group">
@@ -59,7 +78,53 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <button type="submit" class="btn btn-primary" style="width:100%">Sign In as Admin</button>
         </form>
-    </div>
+
+<!-- Demo Credentials -->
+
+<div class="demo-box">
+
+<div class="demo-title">
+<i class="fa-solid fa-flask"></i>
+DEMO CREDENTIALS
 </div>
+
+
+<!-- Teacher -->
+
+<div class="demo-card">
+
+
+
+
+<div class="credential">
+
+<span id="teacher-email">
+admin@university.edu
+</span>
+
+<button class="copy-btn"
+onclick="copyText('teacher-email',this)">
+<i class="fa-regular fa-copy"></i>
+</button>
+
+</div>
+
+<div class="credential">
+
+<span id="teacher-pass">
+adminpassword
+</span>
+
+<button class="copy-btn"
+onclick="copyText('teacher-pass',this)">
+<i class="fa-regular fa-copy"></i>
+</button>
+
+</div>
+
+</div>
+</div>
+<script src="<?= APP_URL ?>/assets/js/auth.js"></script>
+</body>
 </body>
 </html>
