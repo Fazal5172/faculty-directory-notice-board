@@ -20,6 +20,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'New password must be at least 6 characters.';
     } elseif ($password !== $confirm) {
         $error = 'Passwords do not match.';
+    } elseif ($user['u_email'] === 'ahmed.raza@university.edu' || $user['u_email'] === 'ali.hassan@student.edu' ) {
+         $error='Demo accounts cannot be changed.';
+    
     } else {
         $updated = $userModel->update($_SESSION['user_id'], $name, $email, $password);
         if ($updated) {
