@@ -147,48 +147,61 @@ Approve or reject newly registered users directly from the admin panel.
 ```
 faculty-directory/
 │
-├── config/
-│   └── config.php              # DB credentials & app constants
-│
-├── classes/
-│   ├── Database.php            # Singleton DB — all queries via prepared statements
-│   ├── Auth.php                # Session management, login/logout, access guards
-│   ├── User.php                # User registration, login, CRUD, status updates
-│   ├── Notice.php              # Notice board CRUD + per-user filtering
-│   └── Admin.php               # Admin authentication (bcrypt + legacy upgrade)
-│
-├── includes/
-│   ├── bootstrap.php           # Single include: loads config + all classes + session
-│   ├── header.php              # Shared user panel navbar
-│   └── footer.php              # Shared footer
-│
-├── user/                       # User-facing portal
-│   ├── register.php            # Registration form (self-signup)
-│   ├── dashboard.php           # Personalised notice feed
-│   ├── notice.php              # Full notice detail view
-│   ├── account.php             # Edit profile & change password
-│   └── logout.php
-│
-├── admin/                      # Admin panel
-│   ├── index.php               # Admin login
-│   ├── dashboard.php           # Stats overview + recent notices
-│   ├── notices.php             # Publish / edit / delete notices
-│   ├── users.php               # Add / delete users
-│   ├── requests.php            # Approve or reject pending registrations
-│   ├── logout.php
+├── admin/                          # Admin panel
+│   ├── index.php                   # Admin login
+│   ├── dashboard.php               # Dashboard & statistics
+│   ├── notices.php                 # Notice management (CRUD)
+│   ├── users.php                   # User management
+│   ├── requests.php                # Registration approval/rejection
+│   ├── logout.php                  # Admin logout
 │   └── includes/
-│       └── header.php          # Admin navbar (separate from user panel)
+│       └── header.php              # Admin navigation/header
 │
 ├── assets/
-│   └── css/style.css           # Full custom stylesheet — no external dependencies
-│   |--js/auth.js
-├── database/
-│   └── schema.sql              # Full DB schema + seeded demo data
+│   ├── css/
+│   │   ├── style.css               # Main application stylesheet
+│   │   └── contact-widget.css      # Floating contact widget styles
+│   │
+│   ├── js/
+│   │   ├── auth.js                 # Authentication UI interactions
+│   │   └── contact-widget.js       # Contact widget functionality
+│   │
+│   └── screenshots/                # README screenshots
 │
-├── index.php                   # User login page (app entry point)
-├── .gitignore
-└── README.md
-```
+├── classes/
+│   ├── Admin.php                   # Admin operations
+│   ├── Auth.php                    # Authentication & session management
+│   ├── Database.php                # Singleton database connection
+│   ├── Notice.php                  # Notice management
+│   └── User.php                    # User registration & profile management
+│
+├── config/
+│   ├── config.php                  # Database credentials & application constants
+│   └── developer.php               # Developer information & portfolio links
+│
+├── database/
+│   └── schema.sql                  # Database schema with demo data
+│
+├── downloads/
+│   └── Fazal-Abbas-Shah-Resume.pdf # Downloadable resume
+│
+├── includes/
+│   ├── bootstrap.php               # Application bootstrap (loads config, classes & session)
+│   ├── contact-widget.php          # Floating contact widget
+│   ├── header.php                  # Shared user header/navbar
+│   └── footer.php                  # Shared footer
+│
+├── user/
+│   ├── account.php                 # Manage profile & password
+│   ├── dashboard.php               # User dashboard
+│   ├── logout.php                  # User logout
+│   ├── notice.php                  # View notice details
+│   └── register.php                # User registration
+│
+├── .gitignore                      # Git ignored files
+├── index.php                       # User login / application entry point
+├── LICENSE                         # MIT License
+└── README.md                       # Project documentation```
 
 ---
 
