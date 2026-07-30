@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login — <?= APP_NAME ?></title>
     <link rel="stylesheet" href="<?= APP_URL ?>/assets/css/style.css">
-    
+    <link rel="stylesheet" href="<?= APP_URL ?>/assets/css/contact-widget.css">
 <link rel="stylesheet" 
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -124,6 +124,8 @@ onclick="copyText('teacher-pass',this)">
 
 </div>
 </div>
+<?php require_once __DIR__ . '/../includes/contact-widget.php';      ?>
+<script src="<?= APP_URL ?>/assets/js/contact-widget.js"></script>
 <script src="<?= APP_URL ?>/assets/js/auth.js"></script>
 </body>
 </body>
