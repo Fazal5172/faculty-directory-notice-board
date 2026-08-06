@@ -350,7 +350,7 @@ This lets you explore every feature of the system immediately after import — n
 ## 👤 Author
 
 **Fazal Abbas Shah**  
-[GitHub](https://github.com/Fazal5172/faculty-directory-notice-board) ·
+[GitHub](https://github.com/Fazal5172) ·
 [LinkedIn](https://www.linkedin.com/in/fazal111/)
 
 ---
